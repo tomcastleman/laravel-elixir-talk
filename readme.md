@@ -15,7 +15,7 @@ you ideas for how to structure your Vue projects and workflow.
 
 _Not ready for vuex?_ Regardless of your backend stack (but using PHP examples),
 we'll then take look at simple techniques for reading and writing data to / from
-your frontend.
+your Vue components.
 
 ## Instructions
 
