@@ -30,7 +30,7 @@ v5.3.0
 To get started, simply:
 
 1. `git clone https://github.com/tomcastleman/laravel-elixir-talk.git`
-2. `cd elixir-talk`
+2. `cd laravel-elixir-talk`
 3. `npm install`
 4. `npm run serve`
 5. In a second terminal: `npm run dev`
