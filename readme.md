@@ -1,6 +1,6 @@
 # Laravel Elixir for any project
 
-- VueJS London Thursday 7th July 2016
+- London VueJS Meetup, Thursday 7th July 2016
 
 ## Abstract
 
