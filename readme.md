@@ -2,6 +2,21 @@
 
 - VueJS London Thursday 7th July 2016
 
+## Abstract
+
+_Not a webpack ninja?_ [Laravel Elixir](https://github.com/laravel/elixir)
+makes a great front-end build system which just works out the box with little
+or no configuration.
+
+We will start with basic introductions and in this very simple demo project,
+a firewall editor app, move on to cover a range of features including Vue
+template compilation, asset combination & versioning, and browser sync to give
+you ideas for how to structure your Vue projects and workflow.
+
+_Not ready for vuex?_ Regardless of your backend stack (but using PHP examples),
+we'll take look at simple techniques for reading and writing data to / from your
+frontend.
+
 ## Instructions
 
 Known to work with the following node versions:
