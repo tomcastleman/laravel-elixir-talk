@@ -1,0 +1,46 @@
+.fa-btn {
+  margin-right: 6px;
+}
+
+.b3it__wrapped-col {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.b3it__heading-row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  border-bottom: dotted 1px black;
+}
+
+
+.b3it__data-row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: dotted 1px black;
+}
+
+
+.b3it__data-row .form-group {
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+}
+
+
+
+.b3it__spaced-row {
+  padding-top: 8px;
+}
+
+.b3it__btn-text-left {
+  @extend .btn;
+  text-align: left !important;
+}
+
+.b3it__btn-text-left img {
+  width: 32px;
+  margin: 2px 6px 2px 0;
+}

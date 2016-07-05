@@ -1,21 +1,26 @@
 import Vue from 'Vue';
 
-// Setup vue-resource
+// Setup Vue plugins
+
+var VueRouter = require('vue-router');
+Vue.use(VueRouter);
 Vue.use(require('vue-resource'));
 Vue.http.options.xhr = {withCredentials: true};
 Vue.http.options.emulateHTTP = true;
 
-import FirewallList from './components/Firewall/List.vue'
-import FirewallRule from './components/Firewall/Rule.vue'
-import RuleAddDialog from './components/Firewall/AddDialog.vue'
-import RuleDeleteDialog from './components/Firewall/DeleteDialog.vue'
 
-new Vue({
-  el: 'body',
-  components: {
-    FirewallList,
-    FirewallRule,
-    RuleAddDialog,
-    RuleDeleteDialog,
+// Initialise App
+
+var App = Vue.extend({});
+var router = new VueRouter();
+
+router.map({
+  '/': {
+    component: Vue.component('List', require('./components/Firewall/ListPage.vue'))
+  },
+  '/add': {
+    component: Vue.component('Add', require('./components/Firewall/AddPage.vue'))
   }
 });
+
+router.start(App, 'body');

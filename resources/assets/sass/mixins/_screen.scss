@@ -1,0 +1,5 @@
+@mixin screen-gt($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
