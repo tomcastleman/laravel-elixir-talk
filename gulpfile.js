@@ -1,5 +1,8 @@
 var elixir = require('laravel-elixir');
 
+// "npm run serve" fires up http-server on 127.0.0.1:8080
+elixir.config.browserSync.proxy = '127.0.0.1:8080';
+
 require('laravel-elixir-vue');
 
 /*
@@ -13,6 +16,7 @@ require('laravel-elixir-vue');
  |
  */
 
-elixir(function(mix) {
-    mix.webpack('main.js');
+elixir(function (mix) {
+  mix.webpack('app.js')
+    .browserSync();
 });
