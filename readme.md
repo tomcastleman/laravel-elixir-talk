@@ -14,8 +14,8 @@ template compilation, asset combination & versioning, and browser sync to give
 you ideas for how to structure your Vue projects and workflow.
 
 _Not ready for vuex?_ Regardless of your backend stack (but using PHP examples),
-we'll take look at simple techniques for reading and writing data to / from your
-frontend.
+we'll then take look at simple techniques for reading and writing data to / from
+your frontend.
 
 ## Instructions
 
@@ -29,7 +29,7 @@ v5.3.0
 
 To get started, simply:
 
-1. `git clone https://github.com/tomcastleman/elixir-talk.git`
+1. `git clone https://github.com/tomcastleman/laravel-elixir-talk.git`
 2. `cd elixir-talk`
 3. `npm install`
 4. `npm run serve`
