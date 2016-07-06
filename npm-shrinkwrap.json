@@ -685,11 +685,6 @@
       "from": "bootstrap-sass@>=3.3.0 <4.0.0",
       "resolved": "https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.6.tgz"
     },
-    "bootstrap-toggle": {
-      "version": "2.2.2",
-      "from": "bootstrap-toggle@latest",
-      "resolved": "https://registry.npmjs.org/bootstrap-toggle/-/bootstrap-toggle-2.2.2.tgz"
-    },
     "brace-expansion": {
       "version": "1.1.5",
       "from": "brace-expansion@>=1.0.0 <2.0.0",
@@ -813,9 +808,9 @@
       "resolved": "https://registry.npmjs.org/bs-recipes/-/bs-recipes-1.2.2.tgz"
     },
     "buble": {
-      "version": "0.12.3",
+      "version": "0.12.4",
       "from": "buble@>=0.12.3 <0.13.0",
-      "resolved": "https://registry.npmjs.org/buble/-/buble-0.12.3.tgz",
+      "resolved": "https://registry.npmjs.org/buble/-/buble-0.12.4.tgz",
       "dependencies": {
         "acorn": {
           "version": "3.2.0",
@@ -1699,7 +1694,7 @@
     },
     "font-awesome": {
       "version": "4.6.3",
-      "from": "font-awesome@latest",
+      "from": "font-awesome@>=4.6.3 <5.0.0",
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.3.tgz"
     },
     "for-in": {
@@ -5386,7 +5381,7 @@
     },
     "uuid": {
       "version": "2.0.2",
-      "from": "uuid@latest",
+      "from": "uuid@>=2.0.2 <3.0.0",
       "resolved": "https://registry.npmjs.org/uuid/-/uuid-2.0.2.tgz"
     },
     "v8flags": {
@@ -5558,7 +5553,7 @@
     },
     "vue-router": {
       "version": "0.7.13",
-      "from": "vue-router@latest",
+      "from": "vue-router@>=0.7.13 <0.8.0",
       "resolved": "https://registry.npmjs.org/vue-router/-/vue-router-0.7.13.tgz"
     },
     "vue-style-loader": {
