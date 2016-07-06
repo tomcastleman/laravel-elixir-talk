@@ -9,7 +9,7 @@ Vue.http.options.xhr = {withCredentials: true};
 Vue.http.options.emulateHTTP = true;
 
 
-// Initialise App
+// Initialise basic Single Page App (SPA)
 
 var App = Vue.extend({});
 var router = new VueRouter();
