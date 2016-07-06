@@ -1,6 +1,7 @@
 <?php
 return [
     [
+        'id'      => 'f30ffbe5-7f4d-4efa-9c42-10c2c6bf8d70',
         'src'     => '10.0.0.1',
         'dst'     => '192.168.0.1',
         'service' => '80/tcp',
@@ -8,6 +9,7 @@ return [
         'enabled' => false,
     ],
     [
+        'id'      => '308a0661-c437-4b3a-aade-521695733657',
         'src'     => '172.16.0.0/24',
         'dst'     => '10.178.3.0/29',
         'service' => '25/tcp',

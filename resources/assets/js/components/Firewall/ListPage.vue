@@ -1,37 +1,41 @@
 <template>
     <div class="list">
         <h1>List</h1>
-        <table class="table table-striped" v-if="rules.length">
-            <thead>
-            <tr>
-                <th>Src</th>
-                <th>Dst</th>
-                <th>Service</th>
-                <th>Allowed</th>
-                <th>Enabled</th>
-                <th class="buttons"></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr is="rule"
-                v-for="rule in rules"
-                :rule="rule"
-                :services="services"
-            ></tr>
-            </tbody>
-        </table>
+        <div v-if="rules.length">
+            <table class="table table-striped">
+                <thead is="rule-headings"></thead>
+                <tbody>
+                <tr is="rule"
+                    v-for="rule in rules"
+                    :rule="rule"
+                    :services="services"
+                ></tr>
+                </tbody>
+            </table>
+        </div>
         <div v-else>
             <h3>No rules found</h3>
         </div>
+
+        <add-dialog :services="services"></add-dialog>
+
+        <delete-dialog></delete-dialog>
+
+        <button class="btn btn-default" @click="init">
+            <i class="fa fa-refresh"></i>
+        </button>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+
     import Rule from './Rule.vue'
+    import AddDialog from './AddDialog.vue'
     import DeleteDialog from './DeleteDialog.vue'
+    import RuleHeadings from './RuleHeadings.vue'
 
     export default {
-        components: {Rule, DeleteDialog},
+        components: {Rule, RuleHeadings, AddDialog, DeleteDialog},
         data() {
             return {
                 rules: [],
@@ -39,10 +43,13 @@
             };
         },
         ready() {
-            this.getRules();
-            this.getServices();
+            this.init();
         },
         methods: {
+            init() {
+                this.getRules();
+                this.getServices();
+            },
             getRules() {
                 this.$http.get('/data/rules.json').then((response) => {
                     this.rules = response.json();
@@ -53,12 +60,21 @@
                     this.services = response.json();
                 });
             }
+        },
+        events: {
+            openDeleteDialog(rule) {
+                this.$broadcast('openDeleteDialog', rule);
+            },
+            addRule(rule) {
+                this.rules.push(rule);
+            },
+            deleteRule(rule) {
+                this.rules.$remove(rule);
+            }
         }
     }
 </script>
 
 <style scoped>
-    th.buttons {
-        min-width: 95px;
-    }
+
 </style>
