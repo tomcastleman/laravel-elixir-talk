@@ -16,10 +16,21 @@ var router = new VueRouter();
 
 router.map({
   '/': {
-    component: Vue.component('List', require('./components/Firewall/ListPage.vue'))
+    component: {
+      template: '<h1>Static Demo App</h1>'
+    }
   },
-  '/add': {
-    component: Vue.component('Add', require('./components/Firewall/AddPage.vue'))
+  '/firewall': {
+    component: Vue.component('FirewallEditor', require('./components/Firewall/Main.vue'))
+  },
+  '/font-awesome': {
+    component: Vue.component('FontAwesome', require('./components/FontAwesome.vue'))
+  },
+  '/glyph-icons': {
+    component: Vue.component('GlyphIcons', require('./components/GlyphIcons.vue'))
+  },
+  '/manifest': {
+    component: Vue.component('Manifest', require('./components/Manifest.vue'))
   }
 });
 

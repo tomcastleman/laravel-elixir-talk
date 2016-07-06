@@ -19,7 +19,7 @@
 
         <add-dialog :services="services"></add-dialog>
 
-        <delete-dialog></delete-dialog>
+        <delete-dialog :services="services"></delete-dialog>
 
         <button class="btn btn-default" @click="init">
             <i class="fa fa-refresh"></i>

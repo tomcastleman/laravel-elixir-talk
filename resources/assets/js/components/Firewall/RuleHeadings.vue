@@ -6,7 +6,7 @@
         <th>Service</th>
         <th>Allowed</th>
         <th>Enabled</th>
-        <th v-if="!addRule" class="buttons"></th>
+        <th v-if="!hideButtons" class="buttons"></th>
     </tr>
     </thead>
 </template>
@@ -14,7 +14,7 @@
 <script type="text/ecmascript-6">
     export default {
         props: {
-            addRule: {
+            hideButtons: {
                 required: false,
                 default: false
             }

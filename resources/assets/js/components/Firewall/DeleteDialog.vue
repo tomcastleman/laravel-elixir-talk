@@ -9,7 +9,21 @@
                     <h4 class="modal-title">Confirm delete rule</h4>
                 </div>
                 <div class="modal-body">
-                    <p>{{ rule | json }}</p>
+                    <div v-if="rule">
+                        <table class="table table-striped">
+                            <thead is="rule-headings"
+                                   hide-buttons="true">
+                            </thead>
+                            <tbody>
+                            <tr is="rule"
+                                :services="services"
+                                :rule="rule"
+                                read-only="true"
+                                hide-buttons="true"
+                            ></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default btn-primary" data-dismiss="modal" @click="deleteRule">
@@ -24,7 +38,12 @@
 
 <script type="text/ecmascript-6">
 
+    import Rule from './Rule.vue';
+    import RuleHeadings from './RuleHeadings.vue';
+
     export default {
+        props: ['services'],
+        components: {Rule, RuleHeadings},
         data() {
             return {
                 dialog: null,

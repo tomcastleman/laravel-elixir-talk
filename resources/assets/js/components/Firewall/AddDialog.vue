@@ -15,12 +15,14 @@
                     </div>
                     <div class="modal-body">
                         <table class="table table-striped">
-                            <thead is="rule-headings" add-rule="true"></thead>
+                            <thead is="rule-headings"
+                                   hide-buttons="true">
+                            </thead>
                             <tbody>
                             <tr is="rule"
                                 :services="services"
                                 :rule="rule"
-                                add-rule="true"
+                                hide-buttons="true"
                             ></tr>
                             </tbody>
                         </table>
@@ -53,7 +55,7 @@
             };
         },
         created() {
-          this.initRule();
+            this.initRule();
         },
         ready() {
             this.dialog = $('#add-modal');
