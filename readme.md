@@ -34,6 +34,7 @@ To get started, simply:
 3. `npm install`
 4. `npm run serve`
 5. In a second terminal: `npm run dev`
+6. Go to [http://127.0.0.1:10080](http://127.0.0.1:10080)
 
 # Support and Feedback
 
