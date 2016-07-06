@@ -538,7 +538,7 @@
     export default {}
 </script>
 
-<style scoped>
+<style lang="sass" scoped>
     .glyphicon-class {
         display: none;
     }
