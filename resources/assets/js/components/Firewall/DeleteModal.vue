@@ -1,5 +1,6 @@
 <template>
     <modal :modal-id="modalId">
+        <h4 slot="modalTitle" class="modal-title">Delete rule</h4>
         <div slot="modalBody">
             <p>
                 You are about to remove one from this list.
@@ -18,6 +19,12 @@
                 </tbody>
             </table>
         </div>
+        <button slot="modalButton"
+                class="btn btn-default btn-primary"
+                data-dismiss="modal"
+                @click="deleteRule">
+            Delete
+        </button>
     </modal>
 </template>
 

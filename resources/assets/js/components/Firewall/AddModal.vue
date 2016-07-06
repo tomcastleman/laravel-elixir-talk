@@ -4,6 +4,7 @@
             <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
         <modal :modal-id="modalId">
+            <h4 slot="modalTitle" class="modal-title">Add rule</h4>
             <div slot="modalBody">
                 <p>
                     You are about to add one to this list.

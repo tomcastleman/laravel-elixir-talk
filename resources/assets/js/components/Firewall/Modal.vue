@@ -1,11 +1,11 @@
 <template>
-    <div class="modal fade text-left" id="{{ modalId }}" tabindex="-1" role="modal">
-        <div class="modal-modal" role="document">
+    <div class="modal fade" :id="modalId" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Add rule</h4>
+                    <slot name="modalTitle"></slot>
                 </div>
                 <div class="modal-body">
                     <slot name="modalBody"></slot>
