@@ -1,5 +1,5 @@
 <template>
-    <tr>
+    <tr v-if="rule">
         <td>
             <input type="text" class="form-control" v-model="rule.src" :disabled="readOnly"></td>
         <td><input type="text" class="form-control" v-model="rule.dst" :disabled="readOnly"></td>
