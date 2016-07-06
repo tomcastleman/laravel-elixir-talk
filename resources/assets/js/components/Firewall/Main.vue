@@ -1,7 +1,8 @@
 <template>
     <div class="list">
         <h1>List</h1>
-        <div v-if="rules.length">
+        <p>Rule count: {{ ruleCount }}</p>
+        <div v-show="rules.length">
             <table class="table table-striped">
                 <thead is="rule-headings"></thead>
                 <tbody>
@@ -9,19 +10,17 @@
                     v-for="rule in rules"
                     :rule="rule"
                     :services="services"
+                    :save-enabled="saveEnabled"
                 ></tr>
                 </tbody>
             </table>
         </div>
-        <div v-else>
-            <h3>No rules found</h3>
-        </div>
 
-        <add-dialog :services="services"></add-dialog>
+        <add-modal :services="services"></add-modal>
 
-        <delete-dialog :services="services"></delete-dialog>
+        <delete-modal :services="services"></delete-modal>
 
-        <button class="btn btn-default" @click="init">
+        <button class="btn btn-default" @click="syncData">
             <i class="fa fa-refresh"></i>
         </button>
     </div>
@@ -30,23 +29,28 @@
 <script type="text/ecmascript-6">
 
     import Rule from './Rule.vue'
-    import AddDialog from './AddDialog.vue'
-    import DeleteDialog from './DeleteDialog.vue'
+    import AddModal from './AddModal.vue'
+    import DeleteModal from './DeleteModal.vue'
     import RuleHeadings from './RuleHeadings.vue'
 
     export default {
-        components: {Rule, RuleHeadings, AddDialog, DeleteDialog},
+        components: {Rule, RuleHeadings, AddModal, DeleteModal},
+        props: {
+            saveEnabled: Boolean
+        },
         data() {
             return {
                 rules: [],
                 services: []
             };
         },
-        ready() {
-            this.init();
+        computed: {
+            ruleCount() {
+                return this.rules.length;
+            }
         },
         methods: {
-            init() {
+            syncData() {
                 this.getRules();
                 this.getServices();
             },
@@ -62,8 +66,8 @@
             }
         },
         events: {
-            openDeleteDialog(rule) {
-                this.$broadcast('openDeleteDialog', rule);
+            openDeleteModal(rule) {
+                this.$broadcast('openDeleteModal', rule);
             },
             addRule(rule) {
                 this.rules.push(rule);
@@ -71,6 +75,9 @@
             deleteRule(rule) {
                 this.rules.$remove(rule);
             }
+        },
+        ready() {
+            this.syncData();
         }
     }
 </script>

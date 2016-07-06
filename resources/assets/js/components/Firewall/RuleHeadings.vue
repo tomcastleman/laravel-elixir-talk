@@ -14,10 +14,7 @@
 <script type="text/ecmascript-6">
     export default {
         props: {
-            hideButtons: {
-                required: false,
-                default: false
-            }
+            hideButtons: Boolean
         }
     }
 </script>

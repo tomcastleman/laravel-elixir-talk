@@ -12,8 +12,8 @@
         <td><input type="checkbox" v-model="rule.allowed" :disabled="readOnly"></td>
         <td><input type="checkbox" v-model="rule.enabled" :disabled="readOnly"></td>
         <td v-if="!hideButtons">
-            <button class="btn btn-default">
-                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+            <button class="btn btn-default" v-show="saveEnabled">
+                <i class="fa fa-floppy-o" aria-hidden="true" @click="saveRule"></i>
             </button>
             <button class="btn btn-default" @click="deleteRule">
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
@@ -32,14 +32,9 @@
             services: {
                 required: true
             },
-            hideButtons: {
-                required: false,
-                default: false
-            },
-            readOnly: {
-                required: false,
-                default: false
-            }
+            hideButtons: Boolean,
+            readOnly: Boolean,
+            saveEnabled: Boolean
         },
         data() {
             return {};
@@ -47,8 +42,12 @@
         ready() {
         },
         methods: {
+            saveRule() {
+                console.log('save rule');
+                console.debug(this.rule);
+            },
             deleteRule() {
-                this.$dispatch('openDeleteDialog', this.rule);
+                this.$dispatch('openDeleteModal', this.rule);
             }
         }
     }
