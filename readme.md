@@ -42,10 +42,12 @@ To get started, simply:
 1. `git clone https://github.com/tomcastleman/laravel-elixir-talk.git`
 2. `cd laravel-elixir-talk`
 3. `npm install`
-4. `npm run serve-static`
-5. In a new terminal: `npm run serve-php` (optional, you'll need PHP installed)
+4. Start local server(s):
+    - `npm run serve-static`
+    - In a new terminal: `npm run serve-php` (optional, you'll need PHP installed)
 6. In a new terminal: `npm run dev`
-7. Go to [http://127.0.0.1:10080](http://127.0.0.1:10080)
+7. For static app go to [http://127.0.0.1:10080](http://127.0.0.1:10080)
+8. If you did `npm run serve-php` in step 4, go to [http://127.0.0.1:10081](http://127.0.0.1:10081)
 
 ## Documentation
 
