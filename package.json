@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "serve-static": "http-server -a 127.0.0.1 -p 10080",
-    "serve-php": "php -S 127.0.0.1:10081 -t public",
+    "serve": "http-server -a 127.0.0.1 -p 10080",
     "prod": "gulp --production",
     "dev": "gulp watch"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.0",
+    "del": "^2.2.1",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "http-server": "^0.9.0",

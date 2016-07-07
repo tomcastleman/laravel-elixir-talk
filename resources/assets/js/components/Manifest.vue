@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Manifest</h1>
+        <h2>Manifest</h2>
         <pre>{{ manifest | json }}</pre>
     </div>
 </template>
@@ -27,4 +27,7 @@
 
 <style scoped>
 
+    h2 {
+        color: blue;
+    }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="list">
-        <h1>List</h1>
+        <h2>List</h2>
         <p>Rule count: {{ ruleCount }}</p>
         <div v-show="rules.length">
             <table class="table table-striped">

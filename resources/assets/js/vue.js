@@ -17,17 +17,14 @@ var router = new VueRouter();
 router.map({
   '/': {
     component: {
-      template: '<h1>Static Demo App</h1>'
+      template: '<h2>Static Demo App</h2>'
     }
   },
   '/firewall': {
     component: Vue.component('FirewallEditor', require('./components/Firewall/Main.vue'))
   },
-  '/font-awesome': {
-    component: Vue.component('FontAwesome', require('./components/FontAwesome.vue'))
-  },
-  '/glyph-icons': {
-    component: Vue.component('GlyphIcons', require('./components/GlyphIcons.vue'))
+  '/icons': {
+    component: Vue.component('Icons', require('./components/Icons.vue'))
   },
   '/manifest': {
     component: Vue.component('Manifest', require('./components/Manifest.vue'))
