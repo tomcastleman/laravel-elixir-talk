@@ -35,7 +35,7 @@ elixir(function (mix) {
 
   // source file(s) relative to 'resources/assets/js/'
   mix.scripts(['app.js']);
-  mix.scriptsIn(['app.js']);
+  mix.scriptsIn('blog');
 
   // Source file relative to 'resources/assets/coffee/'
   mix.coffee('app.coffee', 'public/js/coffee/compiled.js');
@@ -43,16 +43,23 @@ elixir(function (mix) {
 
   // Style Compilation
   // -----------------
-  
+
+  // Source file relative to 'resources/assets/sass/'
   mix.sass('app.scss', 'public/css/sass/compiled.css');
+  
+  // Source file relative to 'resources/assets/less/'
   mix.less('app.less', 'public/css/less/compiled.css');
+
+  // Source file relative to 'resources/assets/stylus/'
   mix.stylus('app.styl', 'public/css/styl/compiled.css');
+
+  // Source file relative to 'resources/assets/css/'
   mix.styles([
     'normalize.css',
     'main.css'
   ]);
 
-  
+
   // File Operations
   // ---------------
   

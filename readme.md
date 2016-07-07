@@ -17,9 +17,14 @@ _Not ready for vuex?_ Regardless of your backend stack (but using PHP examples),
 we'll then take look at simple techniques for reading and writing data to / from
 your Vue components.
 
-## Instructions
+To follow along, or try it out later follow the instructions below.
 
-Known to work with the following node versions:
+## Install Demo App
+
+### Node Environment
+
+We need node installed. I am working with the following versions:
+
 ```
 ➜  ~ node -v
 v5.3.0
@@ -27,16 +32,37 @@ v5.3.0
 3.7.1
 ```
 
+I haven't tested with the latest node release, but if you have any issues you can
+get the version above from [this link](https://nodejs.org/dist/v5.3.0/).
+
+### Install steps
+
 To get started, simply:
 
 1. `git clone https://github.com/tomcastleman/laravel-elixir-talk.git`
 2. `cd laravel-elixir-talk`
 3. `npm install`
-4. `npm run serve`
-5. In a second terminal: `npm run dev`
-6. Go to [http://127.0.0.1:10080](http://127.0.0.1:10080)
+4. `npm run serve-static`
+5. In a new terminal: `npm run serve-php` (optional, you'll need PHP installed)
+6. In a new terminal: `npm run dev`
+7. Go to [http://127.0.0.1:10080](http://127.0.0.1:10080)
 
-# Support and Feedback
+## Documentation
+
+Laravel Elixir v6 is due out at the end of July 2016. The latest
+documentation can be found [here](https://laravel.com/docs/master/elixir).
+
+If you are interested in the technologies under the hood, particularly if
+you want to customise any default behaviour, you may find these links useful:
+
+- [elixir config](https://github.com/laravel/elixir/blob/master/src/Config.js)
+- [vue-loader](http://vue-loader.vuejs.org/en/index.html)
+    - [webpack](http://webpack.github.io/docs/)
+- [vueify](https://github.com/vuejs/vueify)
+    - [browserify](http://browserify.org/)
+- [rollup](http://rollupjs.org/)
+
+## Support and Feedback
 
 Please do give me feedback or send any questions by email:
 

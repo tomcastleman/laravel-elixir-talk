@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "serve": "http-server -a 127.0.0.1 -p 10080",
-    "serve-php": "php -S 127.0.0.1:10080 -t public",
+    "serve-static": "http-server -a 127.0.0.1 -p 10080",
+    "serve-php": "php -S 127.0.0.1:10081 -t public",
     "prod": "gulp --production",
     "dev": "gulp watch"
   },
