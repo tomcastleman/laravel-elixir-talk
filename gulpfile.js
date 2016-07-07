@@ -14,14 +14,6 @@ require('laravel-elixir-vue');
 
 elixir(function (mix) {
 
-  // Reset build files
-  mix.delete([
-    'public/js/*',
-    'public/css/*',
-    'public/fonts/*',
-    'public/build/*',
-  ]);
-
   mix.sass('app.scss');
   
   mix.webpack('app.js');
