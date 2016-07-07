@@ -36,7 +36,18 @@
     export default {
         components: {Rule, RuleHeadings, AddModal, DeleteModal},
         props: {
-            saveEnabled: Boolean
+            saveEnabled: Boolean,
+            localRules: {
+                required: false,
+                coerce: function (val) {
+                    try {
+                        var obj = JSON.parse(val);
+                        return obj
+                    } catch (err) {
+                        return false;
+                    }
+                }
+            }
         },
         data() {
             return {
@@ -55,6 +66,10 @@
                 this.getServices();
             },
             getRules() {
+                if (this.localRules) {
+                    this.rules = _.clone(this.localRules);
+                    return;
+                }
                 this.$http.get('/data/rules.json').then((response) => {
                     this.rules = response.json();
                 });
