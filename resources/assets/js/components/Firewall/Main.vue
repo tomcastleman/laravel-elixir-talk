@@ -47,6 +47,17 @@
                         return false;
                     }
                 }
+            },
+            localServices: {
+                required: false,
+                coerce: function (val) {
+                    try {
+                        var obj = JSON.parse(val);
+                        return obj
+                    } catch (err) {
+                        return false;
+                    }
+                }
             }
         },
         data() {
@@ -75,6 +86,10 @@
                 });
             },
             getServices() {
+                if(this.localServices) {
+                    this.services = _.clone(this.localServices);
+                    return;
+                }
                 this.$http.get('/data/services.json').then((response) => {
                     this.services = response.json();
                 });
